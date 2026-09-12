@@ -6,10 +6,13 @@ export default function Dashboard() {
   return (
     <Container>
       <h1 className="my-3">Dashboard</h1>
-      <br/>
-      <Row className = "g-3">
+      <br />
+      <Container>
+
+      </Container>
+      <Row className="g-3">
         {data.devices.map(device => (
-          <Col md={3} key={device.id}>
+          <Col md={4} lg={4} key={device.id}>
             <Device device={device} />
           </Col>
         ))}

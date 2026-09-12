@@ -12,71 +12,64 @@
       "id": "dev_doorbell_01",
       "location": "Front Porch",
       "model": "Aegis Doorbell",
-      "category": "camera",
-      "status": "online"
+      "category": "Camera",
+      "status": "Online"
     },
     {
       "id": "dev_cam_out_01",
       "location": "Patio",
       "model": "Aegis View Outdoor",
-      "category": "camera",
-      "status": "online"
+      "category": "Camera",
+      "status": "Online"
     },
     {
       "id": "dev_cam_in_01",
       "location": "Living Room",
       "model": "Aegis View Mini",
-      "category": "camera",
-      "status": "online"
+      "category": "Camera",
+      "status": "Online"
     },
     {
       "id": "dev_safe_01",
       "location": "Kitchen",
       "model": "Aegis Safe Smoke + CO",
-      "category": "smoke detector",
-      "status": "online"
+      "category": "Smoke Detector",
+      "status": "Online"
     },
     {
       "id": "dev_keypad_01",
       "location": "Back Door",
       "model": "Aegis Keypad",
-      "category": "keypad",
+      "category": "Keypad",
       "status": "offline"
     },
     {
       "id": "dev_entry_01",
       "location": "Front Door",
       "model": "Aegis Entry",
-      "category": "sensor",
-      "status": "online"
+      "category": "Sensor",
+      "status": "Online"
     },
     {
       "id": "dev_entry_02",
       "location": "Back Patio Door",
       "model": "Aegis Entry",
-      "category": "sensor",
-      "status": "online"
+      "category": "Sensor",
+      "status": "Online"
     },
     {
       "id": "dev_motion_01",
       "location": "Upstairs Hallway",
       "model": "Aegis Motion",
-      "category": "sensor",
-      "status": "online"
+      "category": "Sensor",
+      "status": "Online"
     },
     {
       "id": "dev_glass_01",
       "location": "Living Room",
       "model": "Aegis Glass",
-      "category": "sensor",
-      "status": "online"
-    },
-    {
-      "id": "dev_flow_01",
-      "location": "Kitchen Sink",
-      "model": "Aegis Flow Guard",
-      "category": "sensor",
-      "status": "online"
+      "category": "Sensor",
+      "status": "Online"
     }
   ]
 }
