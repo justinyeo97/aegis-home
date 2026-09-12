@@ -1,17 +1,19 @@
 import { Card, Button, Image } from 'react-bootstrap'
-import '../App.css'
 
 
 
 export default function Device({ device }) {
     return (
         <Card className="device-card">
-            <Image rounded variant="top" src={`${device.category}.png`} alt={device.category} />
-            <Card.Body>
+            <div className="imgContainer">
+                <Image className={device.status === 'Online' ? 'device-img-online' : 'device-img-offline'} variant="top" src={`${device.category}.png`} alt={device.category} roundedCircle />
+            </div>
+            <Card.Body className="device-info">
                 <Card.Title>{device.model}</Card.Title>
-                <p>{device.category}</p>
-                <p>{device.location}</p>
-                <p>{device.status}</p>
+                <p><strong>Device:</strong> {device.category}</p>
+                <p><strong>Location</strong>: {device.location}</p>
+                <p><strong>Alerts:</strong> {device.alerts}</p>
+                <p><strong>Status:</strong> {device.status}</p>
             </Card.Body>
             <Button>Activate</Button>
         </Card>

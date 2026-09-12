@@ -1,0 +1,43 @@
+.device-img-online {
+    background-color: rgba(0, 0, 0, 0.527);
+    padding: 15px;
+    max-width: 150px;
+    max-height: 150px;
+    box-shadow: 0 0 0 3px rgb(76, 230, 89);
+    margin: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.device-img-online:hover {
+    box-shadow: 0 0 0 6px rgb(76, 230, 89);
+}
+
+.device-img-offline {
+    background-color: rgba(0, 0, 0, 0.527);
+    padding: 10px;
+    max-width: 150px;
+    max-height: 150px;
+    box-shadow: 0 0 0 3px red;
+    margin: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.device-img-offline:hover {
+    box-shadow: 0 0 0 6px red;
+}
+
+.device-info.p {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.device-card {
+    width: auto;
+    min-height: 420px;
+    max-height: 420px;
+}

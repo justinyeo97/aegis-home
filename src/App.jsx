@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Outlet, useNavigate } from "react-router-
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 import RequireAuth from "./components/RequireAuth.jsx";
 import { useLocalStorage } from "usehooks-ts";
@@ -15,7 +15,7 @@ import './App.css'
 function Layout() {
   const navigate = useNavigate();
   const authContext = useContext(AuthContext);
-  const isLoggedIn = authContext.token ? true:false
+  const isLoggedIn = authContext.token ? true : false
 
   function handleLogOut() {
     authContext.setToken(null)
@@ -27,14 +27,17 @@ function Layout() {
     <Container>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/">Aegis Home</Navbar.Brand>
+          <Navbar.Brand href="/">i-Gis Home</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-              {isLoggedIn &&< Nav.Link onClick={handleLogOut} role="button">Log Out</Nav.Link>}
             </Nav>
+            {isLoggedIn && (
+              <Nav>
+                < Nav.Link onClick={handleLogOut} role="button">Log Out</Nav.Link>
+              </Nav>)}
           </Navbar.Collapse>
         </Container>
       </Navbar>

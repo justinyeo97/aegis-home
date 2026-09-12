@@ -13,63 +13,72 @@
       "location": "Front Porch",
       "model": "Aegis Doorbell",
       "category": "Camera",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 4
     },
     {
       "id": "dev_cam_out_01",
       "location": "Patio",
-      "model": "Aegis View Outdoor",
+      "model": "Aegis View",
       "category": "Camera",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 2
     },
     {
       "id": "dev_cam_in_01",
       "location": "Living Room",
       "model": "Aegis View Mini",
       "category": "Camera",
-      "status": "Online"
+      "status": "Offline",
+      "alerts": 2
     },
     {
       "id": "dev_safe_01",
       "location": "Kitchen",
-      "model": "Aegis Safe Smoke + CO",
+      "model": "Aegis Safe Smoke",
       "category": "Smoke Detector",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 6
     },
     {
       "id": "dev_keypad_01",
       "location": "Back Door",
-      "model": "Aegis Keypad",
+      "model": "Aegis Lock",
       "category": "Keypad",
-      "status": "offline"
+      "status": "Offline",
+      "alerts": 3
     },
     {
       "id": "dev_entry_01",
       "location": "Front Door",
-      "model": "Aegis Entry",
+      "model": "Aegis Guard",
       "category": "Sensor",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 0
     },
     {
       "id": "dev_entry_02",
       "location": "Back Patio Door",
-      "model": "Aegis Entry",
+      "model": "Aegis Guard",
       "category": "Sensor",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 1
     },
     {
       "id": "dev_motion_01",
       "location": "Upstairs Hallway",
       "model": "Aegis Motion",
       "category": "Sensor",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 4
     },
     {
       "id": "dev_glass_01",
       "location": "Living Room",
       "model": "Aegis Glass",
       "category": "Sensor",
-      "status": "Online"
+      "status": "Online",
+      "alerts": 0
     }
   ]
 }
