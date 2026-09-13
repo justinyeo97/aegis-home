@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap"
 function ErrorPage(){
     return (
         <Container>
-            <h1>Error Page</h1>
+            <h1 className="center-title">Error Page</h1>
         </Container>
     )
 }

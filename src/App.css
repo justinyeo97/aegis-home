@@ -1,10 +1,38 @@
+.center-title {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    animation: pulseGlow 2s infinite ease-in-out;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.logo:active {
+    
+}
+
 .device-img-online {
-    background-color: rgba(0, 0, 0, 0.527);
+    background-color: rgba(30, 131, 64, 0.678);
     padding: 15px;
     max-width: 150px;
     max-height: 150px;
     box-shadow: 0 0 0 3px rgb(76, 230, 89);
     margin: 20px;
+    margin-bottom: 0px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -13,8 +41,8 @@
 }
 
 .device-img-offline {
-    background-color: rgba(0, 0, 0, 0.527);
-    padding: 10px;
+    background-color: rgba(134, 47, 47, 0.582);
+    padding: 15px;
     max-width: 150px;
     max-height: 150px;
     box-shadow: 0 0 0 3px red;
@@ -36,12 +64,200 @@
     justify-content: center;
 }
 
-.device-card {
+.card-title {
+    background-color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px gold;
     width: auto;
-    min-height: 420px;
-    max-height: 420px;
+    border-radius: 20px;
+    border-style: outset;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.device-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 60px;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 400px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.87);
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.device-spec {
+    text-align: left;
+}
+
+/*Hard Code 3*/
+.status-button {
+    color: white;
+    border: 2px;
+    border-style: outset;
+    transition: border 0.1s ease;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    animation: pulse 2s infinite ease-in-out;
+    animation-play-state: running;
+}
+
+.status-button:active {
+    transform: translateY(2px);
+    border: 2px inset;
+}
+
+.status-button.online {
+    background-color: green;
+    border-color: #28a745;
+}
+
+.status-button.offline {
+    background-color: red;
+    border-color: darkred;
+    box-shadow: none !important;
+}
+
+.status-button.online:hover {
+    background-color: rgb(0, 78, 0);
+}
+
+.status-button.offline:hover {
+    background-color: rgb(167, 0, 0);
 }
 
 .filter {
     margin-right: 10px;
+    background-color: #c0c0c0;
+    border: 2px outset silver;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.filter:active {
+    border-style: inset;
+    background-color: rgb(131, 130, 130) !important;
+    border-color: white !important;
+}
+
+.filter.online {
+    background-color: green;
+}
+
+.filter.online:hover {
+    background-color: rgb(0, 190, 0);
+}
+
+.filter.online:active {
+    background-color: rgb(0, 92, 0) !important;
+}
+
+.filter.offline {
+    background-color: rgb(160, 0, 0);
+}
+
+.filter.offline:hover {
+    background-color: red;
+}
+
+.filter.offline:active {
+    background-color: rgb(102, 1, 1) !important;
+}
+
+.filter:hover {
+    background-color: #d9d9d9;
+    border-color: #d9d9d9;
+}
+
+.kpi-card {
+    border-radius: 50px;
+    border: 4px;
+    border-style: groove;
+}
+
+.kpi-card.online {
+    background-color: rgba(0, 128, 0, 0.507);
+    color: white;
+    text-shadow: 0 0 10px black;
+    border-color: green;
+}
+
+.kpi-card.offline {
+    background-color: rgba(182, 2, 2, 0.507);
+    color: white;
+    text-shadow: 0 0 10px black;
+    border-color: rgb(168, 2, 2);
+}
+
+.kpi-card.alerts {
+    background-color: rgba(255, 208, 0, 0.541);
+    color: white;
+    text-shadow: 0 0 10px black;
+    border-color: rgb(203, 218, 0);
+}
+
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 5px;
+    border-radius: 20px;
+    border-style: outset;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 21%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+
+
+nav,
+footer {
+    position: relative;
+    z-index: 10;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px gold);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px gold);
+  }
 }

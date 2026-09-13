@@ -19,30 +19,64 @@ function Layout() {
 
   function handleLogOut() {
     authContext.setToken(null)
-    navigate('/');
+    navigate('/login');
   }
 
+  //to ensure background image fills the screen but remains static.
+  const bgStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    backgroundImage: 'url(/background-image.webp)',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center top',
+    backgroundSize: '100% auto',
+    fontFamily: '"Orbitron", sans-serif',
+  };
+
+  //to ensure footer sticks to the bottom on short sites.
+  const contentStyle = {
+    flex: 1,
+  };
 
   return (
-    <Container>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="/">i-Gis Home</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-            </Nav>
-            {isLoggedIn && (
-              <Nav>
-                < Nav.Link onClick={handleLogOut} role="button">Log Out</Nav.Link>
-              </Nav>)}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Outlet />
-    </Container>
+    <div style={bgStyle}>
+      <Container style={contentStyle}>
+        <Navbar expand="lg" className="bg-body-tertiary">
+          <Container>
+            <Navbar.Brand href="/"><img
+              alt=""
+              src="/igis-logo.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}iGis</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+              </Nav>
+              {isLoggedIn && (
+                <Nav>
+                  < Nav.Link onClick={handleLogOut} role="button">Log Out</Nav.Link>
+                </Nav>)}
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <Outlet />
+      </Container>
+      <footer style={{
+        textAlign: 'center',
+        padding: '1rem',
+        backgroundColor: '#222',
+        color: '#fff',
+        marginTop: '2rem',
+      }}>
+        &copy; 2026 i-Gis Home. All rights reserved.
+      </footer>
+    </div>
   )
 }
 
