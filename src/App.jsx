@@ -89,16 +89,16 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="login" element={<Login />} />
             <Route
               element={
                 <RequireAuth>
                   <Dashboard />
                 </RequireAuth>
               }
-              path="/dashboard"
+              path="dashboard"
             />
-            <Route path="/*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage />} />
           </Route>
 
         </Routes>
