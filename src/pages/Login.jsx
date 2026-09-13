@@ -10,11 +10,14 @@ export default function Login() {
     const authContext = useContext(AuthContext);
 
     function login() {
-        const isCorrectUsername = username === "admin";
-        const isCorrectPassword = password === "password";
-        if (isCorrectUsername && isCorrectPassword) {
-            authContext.setToken("ngage");
+        if (username === "admin" && password === "password") {
+            authContext.setToken("admin");
             navigate("/dashboard");
+        } else if (username === "guest" && password === "password") {
+            authContext.setToken("guest");
+            navigate("/dashboard");
+        } else {
+            alert("Invalid Username or Password");
         }
     }
     return (

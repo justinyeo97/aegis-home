@@ -41,3 +41,7 @@
     min-height: 420px;
     max-height: 420px;
 }
+
+.filter {
+    margin-right: 10px;
+}

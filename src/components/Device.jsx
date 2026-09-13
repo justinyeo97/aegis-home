@@ -1,8 +1,14 @@
 import { Card, Button, Image } from 'react-bootstrap'
+import { useContext } from 'react';
+import { AuthContext } from '../AuthContext';
+
 
 
 
 export default function Device({ device }) {
+    console.log('Token:,authContext.token')
+    const authContext = useContext(AuthContext);
+    const adminAccess = authContext.token === "admin"
     return (
         <Card className="device-card">
             <div className="imgContainer">
@@ -15,7 +21,7 @@ export default function Device({ device }) {
                 <p><strong>Alerts:</strong> {device.alerts}</p>
                 <p><strong>Status:</strong> {device.status}</p>
             </Card.Body>
-            <Button>Activate</Button>
+            {adminAccess && (<Button>Activate</Button>)}
         </Card>
     )
 }
