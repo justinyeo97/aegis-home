@@ -1,9 +1,12 @@
 import { Container } from "react-bootstrap"
 
-function ErrorPage(){
+function ErrorPage() {
     return (
-        <Container>
-            <h1 className="center-title">Error Page</h1>
+        <Container className="error-page">
+            <div className="error-msg">
+                <h1 className="center-title">404 Error Page</h1>
+                <p>Nothing to see here!</p>
+            </div>
         </Container>
     )
 }
