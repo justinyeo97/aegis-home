@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import Device from "../components/device";
+import Device from "../components/Device.jsx";
 import data from '../devices.json'
 import Info from '../components/Info.jsx'
 import { useState } from 'react';
