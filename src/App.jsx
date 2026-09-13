@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Routes, Outlet, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Outlet, useNavigate, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -55,8 +55,8 @@ function Layout() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
+                <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
               </Nav>
               {isLoggedIn && (
                 <Nav>
